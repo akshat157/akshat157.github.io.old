@@ -7,11 +7,7 @@ html {
 
 .navbar-fixed {
     position: absolute;
-    /* bottom: 0; */
-}
-
-nav {
-    background-color: rgba(255, 255, 255, 0.20);
+    top: 0;
 }
 
 .brand-logo {
@@ -24,7 +20,6 @@ nav {
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
-    /* background-attachment: fixed; */
     background-position: 0 40%;
     background-image: url('../images/banner1.jpg'), linear-gradient(45deg, #14f7ff86, #ff47c8cc, #ffec45e3);
     background-image: url('../images/banner1.jpg'), -webkit-linear-gradient(45deg, #14f7ff86, #ff47c8cc, #ffec45e3);
@@ -36,15 +31,21 @@ nav {
 .card-grid {
     position: absolute;
     top: 12%;
-    left: 10%;
-    right: 10%;
-    bottom: 10%;
-    width: 80%;
+    left: 5%;
+    right: 5%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1.5fr;
-    /* grid-template-rows: 1fr 0.5fr; */
     grid-gap: 0.5em;
-
+    grid-template-columns: repeat(14, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-areas:
+    "dp dp dp dp abt abt abt abt abt abt . . . ."
+    "dp dp dp dp abt abt abt abt abt abt . . . ."
+    "dp dp dp dp abt abt abt abt abt abt . . . ."
+    "dp dp dp dp abt abt abt abt abt abt . . . ."
+    "dp dp dp dp fb   l   g   t          qb qb qb qb qb qb"
+    "cntct cntct cntct cntct eb eb eb eb qb qb qb qb qb qb"
+    "cntct cntct cntct cntct eb eb eb eb qb qb qb qb qb qb"
+    "cntct cntct cntct cntct eb eb eb eb qb qb qb qb qb qb";
 }
 
 .card {
@@ -52,16 +53,44 @@ nav {
     padding: 1em;
 }
 
-.nested-contact-cards {
-    display: grid;
-    grid-template-rows: 3fr 1fr;
-    grid-gap: 0.5em;
+dp {
+    grid-area: dp;
 }
 
-.nested-sociallink-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0.5em;
+about {
+    grid-area: abt;
+}
+
+facebook {
+    grid-area: fb;
+}
+
+twitter {
+    grid-area: t;
+}
+
+linkedin {
+    grid-area: l;
+}
+
+github {
+    grid-area: g;
+}
+
+quotebox {
+    grid-area: qb;
+}
+
+contact {
+    grid-area: cntct;
+}
+
+footer {
+    grid-area: foot;
+}
+
+emptybox {
+    grid-area: eb;
 }
 
 .half-padding {
@@ -94,16 +123,16 @@ nav {
     background-image: url('../images/display-picture.jpg');
     background-size: cover;
     background-position: top right;
-    min-height: 240px;
-    min-width: 240px;
+    /* min-height: 180px;
+    min-width: 180px; */
     width: 100%;
     height: 100%;
 }
 
 .footer {
-    mix-blend-mode: lighten;
-    display: inline-block;
-    position: absolute;
+    position: relative;
+    /* mix-blend-mode: lighten; */
+    display: block;
     bottom: 0;
     width: 100%;
     font-size: 16px;
@@ -142,20 +171,61 @@ nav {
 
 @media only screen and (max-width: 768px) {
     .card-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas:
+        "dp dp dp dp abt abt abt abt"
+        "dp dp dp dp abt abt abt abt"
+        "dp dp dp dp abt abt abt abt"
+        "dp dp dp dp abt abt abt abt"
+        "fb l g t cntct cntct cntct cntct"
+        ". . . . cntct cntct cntct cntct"
+        "eb eb eb eb eb eb eb eb eb eb"
+        "qb qb qb qb qb qb qb qb qb qb"
+        "qb qb qb qb qb qb qb qb qb qb";
+    }
+    .display-picture {
+        min-height: 100px;
+        min-width: 100px;
+    }    
+    .contact {
+        font-size: 2.2vw;
     }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 700px) {
     .card-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas:
+        "dp dp dp dp fb"
+        "dp dp dp dp l"
+        "dp dp dp dp g"
+        "dp dp dp dp t"
+        "abt abt abt abt abt"
+        "abt abt abt abt abt"
+        "abt abt abt abt abt"
+        "cntct cntct cntct cntct cntct"
+        "cntct cntct cntct cntct cntct"
+        "cntct cntct cntct cntct cntct"
+        "eb eb eb eb eb"
+        "qb qb qb qb qb"
+        "qb qb qb qb qb";
     }
-}
-
-@media only screen and (max-width: 425px) {
     nav .brand-logo {
         font-size: 20px;
         margin: 0;
+    }
+    /* .display-picture {
+        min-height: 240px;
+        min-width: 240px;
+    } */
+
+    .fab {
+        font-size: 2.2em;
+        /* color: royalblue; */
+    }
+
+    .social-link {
+        padding: 12px;
     }
 
     .contact {
@@ -165,23 +235,77 @@ nav {
     .footer {
         position: relative;
     }
+
+    
     
 }
 
-@media only screen and (max-width: 320px) {
-    nav .brand-logo {
-        font-size: 20px;
-        margin: 0;
-    }
-
-    .display-picture {
-        min-height: 240px;
-        min-width: 240px;
+@media only screen and (max-width: 375px) {
+    .card-grid {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas:
+        "dp dp dp dp fb"
+        "dp dp dp dp l"
+        "dp dp dp dp g"
+        "dp dp dp dp t"
+        "abt abt abt abt abt"
+        "abt abt abt abt abt"
+        "abt abt abt abt abt"
+        "cntct cntct cntct cntct cntct"
+        "cntct cntct cntct cntct cntct"
+        "cntct cntct cntct cntct cntct"
+        "eb eb eb eb eb"
+        "qb qb qb qb qb"
+        "qb qb qb qb qb";
     }
 
     .fab {
-        font-size: 2.4em;
+        font-size: 2.0em;
         /* color: royalblue; */
+    }
+    .social-link {
+        padding: 10px;
+    }
+
+    .contact {
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    .card-grid {
+        top: 14%;
+        left: 8%;
+        right: 8%;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas:
+        "abt abt abt abt abt"
+        "abt abt abt abt abt"
+        "abt abt abt abt abt"
+        "dp dp dp dp fb"
+        "dp dp dp dp l"
+        "dp dp dp dp g"
+        "dp dp dp dp t"
+        "cntct cntct cntct cntct cntct"
+        "cntct cntct cntct cntct cntct"
+        "cntct cntct cntct cntct cntct"
+        "eb eb eb eb eb"
+        "qb qb qb qb qb"
+        "qb qb qb qb qb";
+    }
+
+    /* .display-picture {
+        min-height: 240px;
+        min-width: 240px;
+    } */
+
+    .fab {
+        font-size: 1.8em;
+        /* color: royalblue; */
+    }
+    .social-link {
+        padding: 10px;
     }
 
     .contact {
