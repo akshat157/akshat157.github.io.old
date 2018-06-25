@@ -8,7 +8,7 @@
   <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--Import Google Icon Font-->
+  <!--Import Google Icons-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--CSS CDNs-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
@@ -21,12 +21,12 @@
 <body>
   <!-- Navbar -->
   <div class="navbar-fixed">
-    <nav class="hoverable">
+    <nav class="translucent-1 hoverable">
       <div class="nav-wrapper">
         <a href="#" class="brand-logo black-text">Akshat Malviya</a>
         <ul class="right hide-on-med-and-down">
           <li>
-            <a class="black-text" href="#">About</a>
+            <a class="black-text" href="#">Home</a>
           </li>
           <li>
             <a class="black-text" href="#">Projects</a>
@@ -41,75 +41,79 @@
 
 
   <!-- Banner -->
-  <div class="banner">
-    </div>
-    <div class="card-grid">
-      <dp class="card hoverable no-padding">
-        <div class="display-picture">
-        </div>
-      </dp>
+  <div class="banner"></div>
+  <div class="card-grid">
+    <dp class="card hoverable no-padding">
+      <div class="display-picture">
+      </div>
+    </dp>
 
-      <div class="nested-contact-cards">
-          <div class="card translucent-1 lighten-1 hoverable flex">
-              <span class="about-text black-text">Hi! I'm <b>Akshat Malviya</b>. I'm a keen learner, a curious explorer and a budding engineer.
-                Currently I've been doing <b>Web and Graphic designing</b> for different small and big projects. I'm also a passionate music lover and sometimes, an amateur artist!
-              </span>
-            </div>
-        
-        <sociallinks class="nested-sociallink-cards">
-          <a href="https://www.facebook.com/akshatmatrix/">
-            <div class="card translucent mix-blend hoverable center social-link">
-              <i class="fab fa-facebook indigo-text"></i>
-            </div>
-          </a>
-          <a href="https://www.linkedin.com/in/akshat-malviya-734564159/">
-            <div class="card translucent mix-blend hoverable center">
-              <i class="fab fa-linkedin blue-text"></i>
-            </div>
-          </a>
-          <a href="https://www.github.com/akshat157/">
-            <div class="card translucent mix-blend hoverable center">
-              <i class="fab fa-github black-text"></i>
-            </div>
-          </a>
-          <a href="https://www.twitter.com/akshatmalviya/">
-            <div class="card translucent mix-blend hoverable center">
-              <i class="fab fa-twitter cyan-text"></i>
-            </div>
-          </a>
-        </sociallinks>
-      </div>
-      <div class="card translucent-2 hoverable flex">
-        <span class="black-text align-self">ERROR 404 Content Not Found. Probably its still under construction!
-        </span>
-      </div>
-      <div class="card translucent-3 hoverable flex">
-          <span class="black-text align-self">ERROR 404 Content Not Found. Probably its still under construction!
-          </span>
+    <about class="card translucent-1 hoverable">
+      <span class="card-title black-text">About Me</span>
+      <p class="about-text black-text">I'm a keen learner, a curious explorer and a budding engineer. Currently I've been doing
+        <b>Web and Graphic designing</b> for different small and big projects. I aspire to be an A.I. researcher and occasionally try my hands on <b>Computer Vison</b> as well.
+        I'm also a passionate music lover and sometimes, an amateur artist!
+      </p>
+    </about>
+
+    <facebook>
+      <a href="https://www.facebook.com/akshatmatrix/" title="facebook">
+        <div class="card translucent-1 mix-blend hoverable center social-link">
+          <i class="fab fa-facebook indigo-text"></i>
         </div>
-      
-      <contacts class="card translucent-2 hoverable">
-          <span class="card-title black-text">Contact</span>
-          <ul>
-            <li class="black-text half-padding">
-              <i class="fas fa-phone"></i>&nbsp;<span class="contact">+91 821 916 4783</span>
-            </li>
-            <li class="half-padding">
-              <i class="fas fa-envelope"></i>&nbsp;<a class="black-text contact" href="mailto:b17003@students.iitmandi.ac.in">b17003@students.iitmandi.ac.in</a>
-            </li>
-            <li class="half-padding">
-              <i class="fas fa-envelope"></i>&nbsp;<a class="black-text contact" href="mailto:malviyakshat@gmail.com">malviyakshat@gmail.com</a>
-            </li>
-          </ul>
-        </contacts>
-    </div>
+      </a>
+    </facebook>
+    <linkedin>
+      <a href="https://www.linkedin.com/in/akshat-malviya-734564159/" title="linkedin">
+        <div class="card translucent-1 mix-blend hoverable center social-link">
+          <i class="fab fa-linkedin blue-text"></i>
+        </div>
+      </a>
+    </linkedin>
+    <github>
+      <a href="https://www.github.com/akshat157/" title="github">
+        <div class="card translucent-1 mix-blend hoverable center social-link">
+          <i class="fab fa-github black-text"></i>
+        </div>
+      </a>
+    </github>
+    <twitter>
+      <a href="https://www.twitter.com/akshatmalviya/" title="twitter">
+        <div class="card translucent-1 mix-blend hoverable center social-link">
+          <i class="fab fa-twitter cyan-text"></i>
+        </div>
+      </a>
+    </twitter>
+    <emptybox class="card translucent-1 hoverable"></emptybox>
+    <quotebox class="card translucent-2 hoverable flex">
+      <span class="black-text align-self">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, doloribus.
+      </span>
+    </quotebox>
+    <contact class="card translucent-2 hoverable">
+      <span class="card-title black-text">Contact</span>
+      <ul>
+        <li class="black-text half-padding">
+          <i class="fas fa-phone"></i>&nbsp;
+          <span class="contact">+91 821 916 4783</span>
+        </li>
+        <li class="half-padding">
+          <i class="fas fa-envelope"></i>&nbsp;
+          <a class="black-text contact" href="mailto:b17003@students.iitmandi.ac.in">b17003@students.iitmandi.ac.in</a>
+        </li>
+        <li class="half-padding">
+          <i class="fas fa-envelope"></i>&nbsp;
+          <a class="black-text contact" href="mailto:malviyakshat@gmail.com">malviyakshat@gmail.com</a>
+        </li>
+      </ul>
+    </contact>
+  </div>
 
   <!-- Footer -->
-  <!-- <div class="footer"> -->
-  <p class="footer white-text center">
-    &copy; 2018 Akshat Malviya. All Rights Reserved.
-  </p>
-  <!-- </div> -->
+  <footer class="footer">
+    <p class="footer white-text center">
+      &copy; 2018 Akshat Malviya. All Rights Reserved.
+    </p>
+  </footer>
   </div>
 
   <!--JavaScript at end of body for optimized loading-->
